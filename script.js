@@ -11,15 +11,18 @@ let isAddingNode = false;
 let isAddingEdge = false;
 let isRemovingNode = false;
 let isRemovingEdge = false;
+let nodeCounter = 1; // Start node numbering from 1
 
 // Canvas interaction functions
 function addNode(x, y) {
-    nodes.push({ x, y });
+    nodes.push({ x, y, label: nodeCounter++ }); // Assign a label based on nodeCounter and increment it
     refreshCanvas();
 }
 
 function addEdge(startNode, endNode) {
-    edges.push({ startNode, endNode });
+    // Prompt user for the weight of the edge
+    const weight = prompt("Enter weight for this edge:", "1");
+    edges.push({ startNode, endNode, weight: parseInt(weight) || 1 }); // Use entered weight or default to 1 if input is invalid
     refreshCanvas();
 }
 
@@ -50,6 +53,7 @@ function clearCanvas() {
     nodes = [];
     edges = [];
     selectedNodes = [];
+    nodeCounter = 1; // Reset node numbering
     refreshCanvas();
 }
 
@@ -66,6 +70,11 @@ function drawNodes() {
         ctx.beginPath();
         ctx.arc(node.x, node.y, 12, 0, Math.PI * 2);
         ctx.fill();
+
+        // Draw the node label
+        ctx.fillStyle = 'blue';
+        ctx.font = '12px Arial';
+        ctx.fillText(`N${node.label}`, node.x - 10, node.y - 15); // Display the node number above the node
     });
 }
 
@@ -73,11 +82,18 @@ function drawEdges() {
     ctx.strokeStyle = 'black'; // Set edge color to black
     ctx.lineWidth = 3; // Slightly thicker
     edges.forEach(edge => {
-        const { startNode, endNode } = edge;
+        const { startNode, endNode, weight } = edge;
         ctx.beginPath();
         ctx.moveTo(startNode.x, startNode.y);
         ctx.lineTo(endNode.x, endNode.y);
         ctx.stroke();
+
+        // Draw the weight label
+        const midX = (startNode.x + endNode.x) / 2;
+        const midY = (startNode.y + endNode.y) / 2;
+        ctx.fillStyle = 'red';
+        ctx.font = '12px Arial';
+        ctx.fillText(weight, midX, midY); // Display the weight at the midpoint of the edge
     });
 }
 
