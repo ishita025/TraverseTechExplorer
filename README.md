@@ -56,22 +56,22 @@ Use cases:
 
 
 ### 1️⃣ This is how the website looks like:
-> 📸 `screenshots/front.png`
+![Front Page](screenshots/front.png)
 
 ### 2️⃣ Adding Vertices:
-> 📸 `screenshots/addVertices.png`
+![Add Vertices](screenshots/addVertices.png)
 
 ### 3️⃣ Adding Edges:
-> 📸 `screenshots/addEdges.png`
+![Add Edges](screenshots/addEdges.png)
 
 ### 4️⃣ Customized Graph Created by User:
-> 📸 `screenshots/Graph.png`
+![Graph](screenshots/Graph.png)
 
 ### 5️⃣ Applying Dijkstra’s Algorithm:
-> 📸 `screenshots/dijkstra.png`
+![Dijkstra Algorithm](screenshots/dijkstra.png)
 
 ### 6️⃣ Shortest Path Result:
-> 📸 `screenshots/shortestPath.png`
+![Shortest Path](screenshots/shortestPath.png)
 
 ---
 
