@@ -74,23 +74,3 @@ Use cases:
 ![Shortest Path](screenshots/shortestPath.png)
 
 ---
-
-## ⚙️ Setup & Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/traverse-tech-explorer.git
-cd traverse-tech-explorer
-
-# Install frontend dependencies
-cd frontend
-npm install
-
-# (Optional) Run backend server
-cd ../backend
-javac Main.java
-java Main
-
-# Start the frontend
-cd ../frontend
-npm start
