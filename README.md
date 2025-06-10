@@ -9,12 +9,7 @@
 - [🧠 Overview](#-overview)
 - [💻 Tech Stack](#-tech-stack)
 - [✨ Key Features](#-key-features)
-- [🖼️ Screenshots](#-screenshots)
-- [⚙️ Setup & Installation](#-setup--installation)
-- [📚 How to Use](#-how-to-use)
-- [🛠️ Future Enhancements](#-future-enhancements)
-- [👨‍💻 Authors](#-authors)
-- [📝 License](#-license)
+- [🖼️ Screenshots](#-Screenshots)
 
 ---
 
