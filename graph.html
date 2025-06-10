@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node and Edge Graph</title>
+    <link rel="stylesheet" href="graph.css">
+</head>
+<body>
+    <div class="taskbar">
+        <img src="photos/lngw.png" alt="Logo" class="logo">
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button class="dropbtn">Generate</button>
+                <div class="dropdown-content">
+                    <a href="#" id="addNode">Add Node</a>
+                    <a href="#" id="removeNode">Remove Node</a>
+                    <a href="#" id="addEdge">Add Edge</a>
+                    <a href="#" id="removeEdge">Remove Edge</a>
+                    <a href="#" id="clearCanvas">Clear Canvas</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Algorithms</button>
+                <div class="dropdown-content" class="algorithmSelector">
+                    <a href="#" id="bfs">Breadth First Search</a>
+                    <a href="#" id="dfs">Depth First Search</a>
+                    <a href="#" id="dijkstra">Dijkstra's Algorithm</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Change Canvas Color</button>
+                <div class="dropdown-content">
+                    <a href="#" data-color="#ffffff">White</a>
+                    <a href="#" data-color="#d3d3d3">Grey</a>
+                    <a href="#" data-color="#EADDCA">Light Brown</a>
+                    <a href="#" data-color="#AFE1AF">Pastel Green</a>
+                    <a href="#" data-color="#aec6cf">Pastel Blue</a>
+                    <a href="#" data-color="#ffb6c1">Pastel Pink</a>
+                </div>
+            </div>
+            <button id="visualizeButton">Visualize</button>
+        </div>
+    </div>
+    <div id="instructions">Click "Add Node" to add a new node. Click "Add Edge" to connect two nodes.</div>
+    <canvas id="graphCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

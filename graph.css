@@ -1,0 +1,164 @@
+/* Updated CSS with modern animations and hover effects */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+}
+
+.taskbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 0 10px;
+    height: 60px;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    height: 48px;
+    margin-right: auto;
+    animation: fadeInLeft 1s ease-out;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.dropdown {
+    position: relative;
+    margin-left: 10px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dropbtn:hover {
+    color: #66ccff;
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.dropbtn:active {
+    transform: scale(0.95); /* Scale down on click */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#visualizeButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#visualizeButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight hover effect */
+}
+
+#visualizeButton:active {
+    transform: scale(0.95); /* Click effect */
+}
+
+#instructions {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#graphCanvas {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    cursor: crosshair;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Node Styling */
+.node {
+    fill: #4db8ff;
+    stroke: #ffffff;
+    stroke-width: 1.5px;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.node:hover {
+    fill: #66ccff;
+    transform: scale(1.2); /* Enlarge node on hover */
+}
+
+/* Edge Styling */
+.edge {
+    stroke: #333;
+    stroke-width: 2.5px;
+    transition: stroke 0.3s ease;
+}
+
+.edge:hover {
+    stroke: #66ccff;
+    stroke-width: 3px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
